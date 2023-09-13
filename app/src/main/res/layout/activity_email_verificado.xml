@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activitys.EmailVerificadoActivity">
+
+
+    <ImageView
+        android:id="@+id/ivVerificado"
+        android:layout_width="207dp"
+        android:layout_height="172dp"
+        android:layout_marginTop="160dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/image_verificado" />
+
+    <TextView
+        android:id="@+id/tvVerificadoComSucesso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Email verificado com sucesso!"
+        android:textSize="16sp"
+        android:textColor="@color/azul_escuro_texto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivVerificado" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonComeceSuasViagens"
+        style="@style/Button_pressed_verde_escuro"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="26dp"
+        android:paddingTop="3dp"
+        android:text="Comece suas viagens"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvVerificadoComSucesso" />
+</androidx.constraintlayout.widget.ConstraintLayout>
