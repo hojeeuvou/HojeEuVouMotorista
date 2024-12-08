@@ -82,167 +82,45 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
-    <HorizontalScrollView
-        android:id="@+id/horizontalScrollView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etEncontrarPassageiro">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:padding="4dp">
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            app:singleSelection="true"
+        app:layout_constraintTop_toBottomOf="@id/etEncontrarPassageiro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/containerTodos"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="10dp"
-                android:layout_marginStart="20dp"
-                app:cardCornerRadius="16dp"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipTodos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Todos"
+            android:checkable="true" />
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipPendentes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pendentes"
+            android:checkable="true" />
 
-                    <TextView
-                        android:id="@+id/tvPassageirosAguardando"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@color/verde_escuro"
-                        android:paddingHorizontal="16dp"
-                        android:paddingVertical="4dp"
-                        android:text="Todos"
-                        android:textColor="@color/white"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipConfirmados"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirmados"
+            android:checkable="true" />
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipAusentes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ausentes"
+            android:checkable="true" />
 
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/containerPendentes"
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_marginVertical="10dp"
-                android:layout_marginStart="20dp"
-                android:paddingVertical="4dp"
-                app:cardCornerRadius="16dp"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@id/containerTodos"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:id="@+id/tvPendentes"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginVertical="2dp"
-                        android:background="@color/white"
-                        android:paddingHorizontal="16dp"
-                        android:paddingVertical="4dp"
-                        android:text="Pendentes"
-                        android:textColor="@color/black"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/containerConfirmados"
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_marginVertical="10dp"
-                android:layout_marginStart="20dp"
-                android:paddingVertical="4dp"
-                app:cardCornerRadius="16dp"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@id/containerPendentes"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:id="@+id/tvConfirmados"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginVertical="2dp"
-                        android:background="@color/white"
-                        android:paddingHorizontal="16dp"
-                        android:paddingVertical="4dp"
-                        android:text="Confirmados"
-                        android:textColor="@color/black"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/containerAusentes"
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_marginVertical="10dp"
-                android:layout_marginStart="20dp"
-                android:paddingVertical="4dp"
-                app:cardCornerRadius="16dp"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@id/containerConfirmados"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:id="@+id/tvAusentes"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginVertical="2dp"
-                        android:background="@color/white"
-                        android:paddingHorizontal="16dp"
-                        android:paddingVertical="4dp"
-                        android:text="Ausentes"
-                        android:textColor="@color/black"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </androidx.cardview.widget.CardView>
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    </HorizontalScrollView>
+    </com.google.android.material.chip.ChipGroup>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerPassageiros"
@@ -251,7 +129,7 @@
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+        app:layout_constraintTop_toBottomOf="@+id/chipGroup" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
